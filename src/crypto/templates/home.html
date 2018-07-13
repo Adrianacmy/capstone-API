@@ -1,1 +1,27 @@
-<h3>hello</h3>
+{% extends 'base.html' %} 
+
+{% block content %}
+
+<div class="container">
+  <h4 class="my-5">Crypto News </h4>
+  <div class="row">
+      {% for news in news.Data %}
+    <div class="col-12 col-md-3">
+        <div class="card" style="width: 18rem;">
+            <img class="card-img-top" src={{ news.imageurl}} alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">{{ news.title }}</h5>
+              <p class="card-text">{{ news.body}}</p>
+              <a href={{ news.url }} class="btn btn-primary">read more</a>
+            </div>
+          </div>
+    </div>
+    
+    {% endfor %}
+  </div>
+
+
+
+
+    {{ news.Data}}
+{% endblock content %}
