@@ -3,6 +3,32 @@
 {% block content %}
 
 <div class="container">
+
+    <h4 class="my-5">Crypto Price </h4>
+
+    <table class="table table-hover table-dark">
+        <thead>
+          <tr>
+            <th scope="col">SYMBLE</th>
+            <th scope="col">PRICE</th>
+            <th scope="col">HIGHDAY</th>
+            <th scope="col">LOWDAY</th>
+            <th scope="col">MKTCAP</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for key, value in price.DISPLAY.items %}
+          <tr>
+            <th scope="row">{{ key }}</th>
+            <td>{{ value.USD.PRICE}}</td>
+            <td>{{value.USD.HIGHDAY}}</td>
+            <td>{{value.USD.LOWDAY}}</td>
+            <td>{{value.USD.MKTCAP}}</td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+  <hr>
   <h4 class="my-5">Crypto News </h4>
   <div class="row">
       {% for news in news.Data %}

@@ -1,0 +1,1 @@
+https://min-api.cryptocompare.com/
