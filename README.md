@@ -25,7 +25,7 @@ Run below commands in terminal:
  pip install requirements.txt
  python manage.py makemigrations
  python manage.py migrate
- python manage.py createsuperuser  #follow step by step to create the user
+ python manage.py createsuperuser  #follow step by step to create the superuser
  python manage.py runserver
  
 ```

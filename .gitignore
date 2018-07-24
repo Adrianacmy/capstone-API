@@ -58,7 +58,11 @@ coverage.xml
 
 # Django stuff:
 *.log
-local_settings.py
+src/safeBuy/settings/local.py
+src/safeBuy/settings/base.py
+src/safeBuy/old_settings.py
+static_cdn/
+
 db.sqlite3
 
 # Flask stuff:
